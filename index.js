@@ -118,10 +118,8 @@ async function call_api(loc) {
     }
     const json = await response.json();
     api=json;
-    console.log(api);
     hor_now=+zoone(api.timezone)[1] + 1;
 
-    console.log(localCity);
     if( chech_typeCity(loc) && ! localCity.includes(loc) ){
       if(nomberCity>=5)nomberCity=0;
       else nomberCity++;
@@ -298,7 +296,6 @@ function s (apik,precip){
 }
 function backGroundImage(){
   let rand= Math.floor( (Math.random()* li_img.length));
-  console.log(rand);
   let a=li_img[rand];
   img.src=a;
   
